@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { ThemeProvider } from 'styled-components';
+import { DarkmodeProvider } from './context';
 
 const theme = {
   colors: {
@@ -11,7 +12,9 @@ const theme = {
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
-    <App />
+    <DarkmodeProvider>
+      <App />
+    </DarkmodeProvider>
   </ThemeProvider>,
   document.getElementById('root')
 );

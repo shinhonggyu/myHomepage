@@ -33,11 +33,6 @@ const Name = styled.h1`
   margin-bottom: 10px;
 `;
 
-const Span = styled.span`
-  font-size: inherit;
-  color: crimson;
-`;
-
 const Title = styled.div`
   height: 50px;
   overflow: hidden;
@@ -116,7 +111,7 @@ const Bg = styled.div`
 `;
 
 const Image = styled.img`
-  width: 80%;
+  width: 75%;
   height: 100%;
   object-fit: cover;
   margin-left: 100px;

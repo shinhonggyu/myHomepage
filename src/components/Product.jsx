@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import movie from '../img/static/movie.png';
 
 const Image = styled.img`
   width: 100%;
@@ -44,7 +43,7 @@ const Link = styled.a`
   cursor: pointer;
 `;
 
-const Product = () => {
+const Product = ({ item }) => {
   return (
     <Container>
       <Browser>
@@ -52,8 +51,8 @@ const Product = () => {
         <Circle></Circle>
         <Circle></Circle>
       </Browser>
-      <Link href="http://lama.dev" target="_blank">
-        <Image src={movie} />
+      <Link href={item.link} target="_blank">
+        <Image src={item.img} />
       </Link>
     </Container>
   );

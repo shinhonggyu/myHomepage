@@ -1,5 +1,8 @@
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import ListTitle from './ListTitle';
 import Product from './Product';
+import { staticPortfolio, mernPortfolio, reactPortfolio } from '../data';
 
 const Container = styled.div`
   background-color: white;
@@ -18,38 +21,58 @@ const Ul = styled.ul`
   display: flex;
 `;
 
-const Li = styled.li`
-  margin: 20px 50px;
-  border: 1px solid black;
-  padding: 7px;
-  border-radius: 10px;
-  cursor: pointer;
-  background-color: ${({ active, theme }) => active && theme.colors.main};
-  color: ${({ active }) => active && 'white'};
-`;
-
 const Projects = styled.div`
   width: 75%;
   display: flex;
   flex-wrap: wrap;
 `;
 
+const titleData = [
+  {
+    id: 'STATIC',
+    title: 'STATIC',
+  },
+  {
+    id: 'REACT',
+    title: 'REACT',
+  },
+  {
+    id: 'MERN',
+    title: 'MERN',
+  },
+];
+
 const Portfolio = () => {
+  const [selected, setSelected] = useState('STATIC');
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    if (selected === 'STATIC') {
+      setData(staticPortfolio);
+    } else if (selected === 'REACT') {
+      setData(reactPortfolio);
+    } else {
+      setData(mernPortfolio);
+    }
+  }, [selected]);
+
   return (
     <Container id="portfolio">
       <Title>Projects</Title>
       <Ul>
-        <Li active>STATIC</Li>
-        <Li>REACT</Li>
-        <Li>MERN</Li>
+        {titleData.map((item) => (
+          <ListTitle
+            title={item.title}
+            key={item.id}
+            active={item.id === selected}
+            setSelected={setSelected}
+          />
+        ))}
       </Ul>
       <Projects>
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
+        {data.map((item) => (
+          <Product item={item} key={item.id} />
+        ))}
       </Projects>
     </Container>
   );
