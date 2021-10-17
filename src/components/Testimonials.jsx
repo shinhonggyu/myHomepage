@@ -42,28 +42,23 @@ const Testimonials = () => {
   return (
     <Container id="testimonials">
       <Card>
-        <Title>CREATIVITY</Title>
+        <Title>FrontEnd</Title>
         <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQViPB34k3mP1TDLjDa7z1_8D8-wSFmiyn9dw&usqp=CAU" />
         <Desc>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium
-          officia illo necessitatibus pariatur itaque amet,
+          HTML, CSS, SVG, JavaScript, React, ContextAPI, Redux, ReduxToolkit,
+          Scss, Styled-Components
+          {/* TypeScript, Next.js */}
         </Desc>
       </Card>
       <Card>
-        <Title>CREATIVITY</Title>
+        <Title>BackEnd</Title>
         <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuH1zby5-lcJGtJoudXpiJcuAGrdlnCKhhkw&usqp=CAU" />
-        <Desc>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium
-          officia illo necessitatibus pariatur itaque amet,
-        </Desc>
+        <Desc>Node.js, Firebase</Desc>
       </Card>
       <Card>
-        <Title>CREATIVITY</Title>
+        <Title>Tools</Title>
         <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFym1vBcvVd-ganhbh_OWQq38fRK4Z397_hw&usqp=CAU" />
-        <Desc>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium
-          officia illo necessitatibus pariatur itaque amet,
-        </Desc>
+        <Desc>Git, Github, GitKraken, Postman ••</Desc>
       </Card>
     </Container>
   );
